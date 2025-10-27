@@ -1,20 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Schubring</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel Schubring — Theoretical Physicist</title>
+  <meta name="description" content="Daniel Schubring — research in quantum field theory, holography, and kinetic theory. Publications, talks, and contact." />
+  <link rel="icon" href="/favicon.ico" />
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 2em auto; line-height: 1.5; }
-    h1 { border-bottom: 2px solid #ccc; padding-bottom: 0.2em; }
-    a { color: #0044cc; text-decoration: none; }
+    /* --- Base, typography, layout --- */
+    :root {
+      --text: #0b0b0c;
+      --muted: #6b7280; /* gray-500 */
+      --link: #1d4ed8; /* blue-700 */
+      --bg: #ffffff;
+      --card: #f8fafc; /* slate-50 */
+      --border: #e5e7eb; /* gray-200 */
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --link: #93c5fd;
+        --bg: #0b0b0c;
+        --card: #0f172a; /* slate-900 */
+        --border: #1f2937; /* gray-800 */
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.55;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      align-items: center;
+      padding: 28px 0 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.2px;
+    }
+    .subtitle { color: var(--muted); margin: 0 0 8px 0; }
+    .contact { margin-top: 6px; }
+    .contact a { color: var(--link); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 14px 0 22px;
+    }
+    nav a {
+      color: var(--link);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--card);
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    section { padding: 18px 0; }
+    section + section { border-top: 1px solid var(--border); }
+    h2 { font-size: 1.35rem; margin: 0 0 12px 0; }
+    h3 { font-size: 1.05rem; margin: 16px 0 6px 0; }
+
+    .lead {
+      font-size: 1.02rem;
+      margin: 6px 0 0 0;
+    }
+    .meta { color: var(--muted); font-size: 0.95rem; }
+
+    ul.clean { list-style: none; padding: 0; margin: 0; }
+    ul.clean li { padding: 8px 0; }
+
+    .paper a { color: var(--link); text-decoration: none; }
+    .paper a:hover { text-decoration: underline; }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+      padding: 16px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Print-friendly tweaks */
+    @media print {
+      nav { display: none; }
+      header { border-bottom: 0; }
+      .footer { border-top: 0; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.9em; }
+    }
+
+    /* Small screens */
+    @media (max-width: 620px) {
+      header { grid-template-columns: 1fr; text-align: center; }
+      header img { margin: 0 auto; }
+      nav { justify-content: center; }
+    }
   </style>
 </head>
 <body>
-  <h1>Daniel Schubring</h1>
-  <p>Postdoctoral researcher in theoretical physics.</p>
-  <p>My research focuses on quantum field theory, holography, and kinetic theory.</p>
-  <p><a href="mailto:daniel@daschubring.com">daniel@daschubring.com</a></p>
-  <p><a href="https://arxiv.org/a/schubring_d_1.html">arXiv author page</a></p>
+  <div class="container">
+    <header>
+      <!-- Replace with your actual image path; e.g., /assets/photo.jpg -->
+      <img src="/assets/photo.jpg" alt="Portrait of Daniel Schubring" />
+      <div>
+        <h1>Daniel Schubring</h1>
+        <p class="subtitle">Theoretical Physicist • Quantum Field Theory, Holography, Kinetic Theory</p>
+        <p class="lead">
+          I am a postdoctoral researcher in theoretical physics. My work focuses on quantum field theory,
+          nonequilibrium dynamics and transport, holographic models of QCD, and effective descriptions of many-body systems.
+        </p>
+        <p class="contact meta">
+          Email: <span>daniel [at] daschubring [dot] com</span>
+          &nbsp;•&nbsp; Office: <span>Room 123, Department of Physics (CUNY City College)</span>
+          &nbsp;•&nbsp; <a href="#cv">CV</a> &middot; <a href="https://arxiv.org/a/schubring_d_1.html">arXiv</a> &middot; <a href="https://scholar.google.com/">Google Scholar</a>
+        </p>
+      </div>
+    </header>
+
+    <nav aria-label="Primary">
+      <a href="#research">Research</a>
+      <a href="#talks">Talks & Slides</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV & Statements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        Below are a few current and recent directions. This section can be as brief or detailed as you like; feel free to add
+        short bullets, links to preprints, and slide PDFs for quick entry points.
+      </p>
+
+      <h3>Free energy and kinetic theory from the S‑matrix</h3>
+      <p class="meta">with collaborators — thermodynamics from scattering data; transport from correlators</p>
+      <ul>
+        <li>Dashen–Ma–Bernstein formalism for interacting gases; connections to Schwinger–Keldysh approaches.</li>
+        <li>Resummations and consistency checks; benchmarking against exactly solvable models.</li>
+      </ul>
+
+      <h3>Holographic QCD and topological defects</h3>
+      <p class="meta">baryons, higher‑spin currents, and Chern–Simons sectors</p>
+      <ul>
+        <li>Scalar–Chern–Simons toy models illuminating baryon charge and defect spectra.</li>
+        <li>AdS/CFT perspectives on effective string worldsheet dynamics.</li>
+      </ul>
+
+      <h3>Nonequilibrium field theory & wave turbulence</h3>
+      <ul>
+        <li>Derivation and structure of wave kinetic equations; transport coefficients and hydrodynamic limits.</li>
+        <li>Connections between scattering amplitudes, SK real‑time methods, and kinetic closures.</li>
+      </ul>
+    </section>
+
+    <section id="talks">
+      <h2>Talks & Slides</h2>
+      <ul class="clean">
+        <li>
+          <div class="paper">
+            <strong>Free energy and kinetic theory from the S‑matrix</strong> — Seminar, CUNY, 2024
+            — <a href="/slides/dsb_smatrix_2024.pdf">slides (PDF)</a>
+          </div>
+          <div class="meta">Invite / colloquium / seminar info can go here.</div>
+        </li>
+        <li>
+          <div class="paper">
+            <strong>Holographic models of baryons</strong> — Workshop talk, 2025
+            — <a href="/slides/dsb_holographic_baryons_2025.pdf">slides (PDF)</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p class="meta">Full list at <a href="https://arxiv.org/a/schubring_d_1.html">arXiv</a> and Inspire/Google Scholar.</p>
+      <ul class="clean">
+        <li class="paper">
+          <strong>Title of a Recent Paper</strong> — <em>Journal Name</em> (Year).
+          <a href="#">arXiv:0000.xxxxx</a> · <a href="#">journal</a> · <a href="#">bib</a>
+        </li>
+        <li class="paper">
+          <strong>Another Paper</strong> — <em>Journal</em> (Year).
+          <a href="#">arXiv:0000.xxxxx</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>CV & Statements</h2>
+      <ul class="clean">
+        <li><a href="/docs/Daniel_Schubring_CV.pdf">Curriculum Vitae (PDF)</a></li>
+        <li><a href="/docs/Daniel_Schubring_Research_Statement.pdf">Research Statement (PDF)</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <strong>daniel [at] daschubring [dot] com</strong></p>
+      <p>Office: <strong>Room 123, Department of Physics (CUNY City College)</strong></p>
+      <p class="meta">Links: <a href="https://arxiv.org/a/schubring_d_1.html">arXiv</a> · <a href="https://inspirehep.net/">InspireHEP</a> · <a href="https://github.com/">GitHub</a></p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Daniel Schubring. This site is static (GitHub Pages). Last updated: <span id="updated"></span>.
+    </footer>
+  </div>
+
+  <script>
+    // Set current year and a human-friendly "last updated" timestamp.
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      const updated = new Date(document.lastModified);
+      const opts = { year: 'numeric', month: 'short', day: '2-digit' };
+      document.getElementById('updated').textContent = updated.toLocaleDateString(undefined, opts);
+    })();
+  </script>
 </body>
 </html>
