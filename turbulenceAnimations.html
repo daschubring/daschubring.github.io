@@ -2,14 +2,92 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>KZ to Phillips</title>
+  <title>A local model for strong wave turbulence</title>
 </head>
 
 <body>
 
-  <video controls loop muted playsinline>
-  <source src="/assets/kzPhillips.mp4" type="video/mp4">
-</video>
+<h1>
+ Numerical simulation of a local model for wave turbulence
+</h1>
+ <p>
+    This is a numerical simulation of the strongly local model of wave turbulence
+    developed in <a href="https://arxiv.org/abs/2406.18475">this paper</a>.
+    For more details, see also
+    <a href="slides/turbulenceTalk090826.pdf">these slides</a>.
+    The horizontal axis is &sigma; = (1/2) log k, where k is the wave number,
+    and the vertical axis is u, a rescaling of the energy spectrum E(k).
+  </p>
+
+  <div style="text-align: center;">
+
+    <video controls loop muted playsinline width="700">
+      <source src="assets/kzPhillips.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+ 
+
+  <p>
+    Energy is initially injected at large wavelengths (small k) and cascades
+    towards smaller wavelengths, eventually reaching a stationary state
+    interpolating between Kolmogorov-Zakharov (weak turbulence) and Phillips
+    (strong turbulence) scaling.
+
+  </p>
+
+ <p>
+    The physical simulation time, displayed at the bottom of the animation,
+    advances nonuniformly relative to the video time. This is necessary to
+    resolve the increasingly rapid evolution as energy reaches smaller
+    length scales, an example of a <em>finite-time blowup</em> investigated
+    further in <a href="https://arxiv.org/abs/2509.23199">this paper</a>.
+    For stronger energy injection or weaker viscous damping (whose onset is
+    indicated by the vertical gray line), the model can also exhibit
+    oscillatory behavior. An example of an oscillatory scaling solution
+    is shown in <a href="turbulenceAnimations2.html">this animation</a>.
+  </p>
+
+  <p>
+    A similar crossover in scaling behavior
+    has been observed experimentally in ocean waves, as shown below
+    in measurements by
+    <a href="https://doi.org/10.1175/JPO-D-17-0017.1">Lenain and Melville (2017)</a>. In this figure the KZ scaling is referred to as "Equilibrium" and the Phillips as "Saturation".
+    Also note that the rescaling of the energy spectrum from E(k) to u(&sigma;) changes the apparent slopes
+    relative to the simulation.
+  </p>
+
+  <div style="text-align: center;">
+    <figure>
+      <img src="assets/lenainMelville.png"
+           alt="Experimental ocean wave energy spectrum showing KZ and Phillips scaling"
+           loading="lazy" width="600">
+      <figcaption>
+        Experimental ocean wave spectrum from Lenain and Melville (2017).
+      </figcaption>
+    </figure>
+  </div>
+
+ <div style="text-align: center; margin-top: 40px;">
+  <p><a href="index.html">← Back to main page</a></p>
+</div>
+
+<hr style="margin-top: 30px;">
+
+<footer style="text-align: center; font-size: 0.9em; color: #555;">
+  
+
+  <p>
+    Email: daschubring [at] gmail [dot] com
+    &nbsp; • &nbsp;
+    <a href="https://arxiv.org/a/schubring_d_1.html">arXiv</a>
+    &nbsp; • &nbsp;
+    <a href="https://scholar.google.com/">Google Scholar</a>
+  </p>
+
+  <p>© Daniel Schubring</p>
+</footer>
 
 </body>
 </html>
