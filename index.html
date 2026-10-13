@@ -256,7 +256,26 @@ Under construction! <a href="https://github.com/daschubring/o3-cp1-diffusion">Gi
     <summary>Nonholonomic dynamics and quantum open systems</summary>
     <div class="fold-body">
 
-      Under construction! From [<a href="https://arxiv.org/abs/2607.26146">2607.26146</a>] with Sriram Ganeshan.
+<p>
+Classical systems with <em>nonholonomic constraints</em> include familiar examples such as a sphere rolling without slipping on a plane or a skate that can move only in the direction it is pointing. Unlike ordinary mechanical constraints, nonholonomic constraints cannot be expressed simply as restrictions on the positions of a system, but instead impose conditions on its velocities. Such systems do not have the usual Hamiltonian structure, and finding a consistent way to quantize them has been a longstanding problem, dating back to Dirac and Eden.
+</p>
+
+
+      <figure class="media-figure">
+ <img
+    src="assets/skaterBlobPlot.png"
+    alt="Simulation of the quantum skater system"
+    loading="lazy" decoding="async" width="600" >
+  <figcaption>
+An example of a nonholonomic system is the <em>skater system</em>. This involves a mass that can rotate freely, but which has an internal 'skate' direction and it is constrained to move translationally in the direction of the skate. A classical skater trajectory in the 2D xy-plane is shown as the dark gray curve. The corresponding quantum skater system is depicted as snapshots of a wave packet in the xy-plane with time represented by color.
+  </figcaption>
+</figure>
+
+<p>
+Together with Sriram Ganeshan, I developed a new approach to quantizing nonholonomic systems using ideas from quantum open systems [<a href="https://arxiv.org/abs/2607.26146">2607.26146</a>]. The key observation is that a nonholonomic constraint can be realized as the limit of infinitely strong dissipation, which suppresses motion in the forbidden directions. We therefore begin with an unconstrained quantum system coupled to an environment, and recover the desired constrained dynamics in the strong-dissipation limit. This provides a connection between nonholonomic mechanics and the theory of metastability in open quantum systems.
+</p>
+
+
     </div>
   </details>
 
